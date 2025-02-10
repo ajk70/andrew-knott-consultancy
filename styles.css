@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Qualifications Section */
+#qualifications {
+    background-color: #ffffff;
+    padding: 30px 20px;
+}
+
+#qualifications h2 {
+    text-align: center;
+}
+
+#qualifications ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+/* Services Section */
+#services {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+}
+
+#services h2 {
+    text-align: center;
+}
+
+.expertise-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.expertise-grid li {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: #003366;
+}
