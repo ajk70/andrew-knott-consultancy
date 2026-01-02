@@ -3,55 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knott Automation Projects</title>
+  <title>Knott Automation Projects | Industry 4.0 & CSV</title>
   <style>
-    /* CSS STYLES */
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
-    header { display: flex; justify-content: space-between; align-items: center; background-color: #003366; color: white; padding: 15px 20px; }
-    header .logo { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
+    /* CORE STYLES */
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+    
+    /* HEADER */
+    header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      background-color: #003366; 
+      color: white; 
+      padding: 10px 20px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    /* LOGO HANDLING */
+    header .logo-container { display: flex; align-items: center; }
+    header .logo-img { 
+      max-height: 60px; /* Controls logo size */
+      width: auto; 
+      margin-right: 15px;
+      background: white; /* Optional: white box behind transparent logos */
+      padding: 5px;
+      border-radius: 4px;
+    }
+    header .logo-text { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* NAVIGATION */
     nav ul { list-style-type: none; margin: 0; padding: 0; }
     nav ul li { display: inline; margin-left: 20px; }
-    nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+    nav ul li a { color: #f4f4f4; text-decoration: none; font-weight: 500; font-size: 1.05rem; transition: color 0.3s; }
+    nav ul li a:hover { color: #ffcc00; }
     
-    .hero { background-color: #f4f4f4; text-align: center; padding: 80px 20px; border-bottom: 5px solid #003366; }
-    .hero h1 { color: #003366; margin-bottom: 20px; }
-    .cta-button { display: inline-block; padding: 12px 30px; background-color: #003366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    /* HERO SECTION */
+    .hero { 
+      background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white; 
+      text-align: center; 
+      padding: 100px 20px; 
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; font-weight: 300; }
     
-    section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
-    h2 { color: #003366; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+    /* BUTTONS */
+    .btn-group { margin-top: 20px; }
+    .btn { 
+      display: inline-block; 
+      padding: 12px 25px; 
+      margin: 10px; 
+      text-decoration: none; 
+      border-radius: 5px; 
+      font-weight: bold; 
+      transition: all 0.3s;
+    }
+    .btn-primary { background-color: #ffcc00; color: #003366; }
+    .btn-primary:hover { background-color: #e6b800; transform: translateY(-2px); }
     
-    .about-text { line-height: 1.6; }
-    .career-timeline li, .expertise-grid li { margin-bottom: 10px; }
-    .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; list-style: none; padding: 0; }
-    .expertise-grid li { background: #f9f9f9; padding: 15px; border-left: 4px solid #003366; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .btn-secondary { background-color: transparent; border: 2px solid white; color: white; }
+    .btn-secondary:hover { background-color: white; color: #003366; transform: translateY(-2px); }
 
-    footer { background-color: #003366; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    /* SECTIONS */
+    section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+    h2 { color: #003366; border-bottom: 3px solid #ffcc00; display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
+    
+    /* GRIDS */
+    .career-timeline li { margin-bottom: 15px; padding-left: 10px; border-left: 4px solid #ddd; }
+    .career-timeline strong { color: #003366; }
+    
+    .expertise-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px; 
+      padding: 0; 
+      list-style: none; 
+    }
+    .expertise-grid li { 
+      background: #f9f9f9; 
+      padding: 20px; 
+      border-left: 5px solid #003366; 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+      font-weight: 600;
+      color: #444;
+    }
+
+    /* FOOTER */
+    footer { background-color: #003366; color: white; text-align: center; padding: 40px 20px; margin-top: 40px; }
     footer a { color: #ffcc00; text-decoration: none; }
+    
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      header { flex-direction: column; }
+      nav ul { margin-top: 15px; }
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo">Knott Automation Projects</div>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Knott AP Logo" class="logo-img" onerror="this.style.display='none'">
+      <div class="logo-text">Knott Automation Projects</div>
+    </div>
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
         <li><a href="#qualifications">Experience</a></li>
+        <li><a href="mailto:andrew@knottap.co.uk">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Delivering World-Class Solutions in Automation, MES, CSV, and Industry 4.0</h1>
+    <h1>Delivering World-Class Solutions in Automation, MES, CSV & Industry 4.0</h1>
     <p>Principal Consultant: Andrew Knott | BSc (Hons), Dipl Eng, CEng, MBA</p>
-    <br>
-    <a href="#services" class="cta-button">View Services</a>
+    
+    <div class="btn-group">
+      <a href="flyer.pdf" class="btn btn-primary" target="_blank">📄 Download 1-Page Flyer</a>
+      <a href="cv.pdf" class="btn btn-secondary" target="_blank">👤 Download CV</a>
+    </div>
   </section>
 
   <section id="about">
-    <h2>About</h2>
+    <h2>Executive Summary</h2>
     <div class="about-text">
-      <p>I am a results-oriented Chartered Engineer with 30+ years of global experience in project management, Industry 4.0 (Automation, MES - SMART Manufacturing), and Computerised Systems Validation in Life Sciences.</p>
+      <p>I am a results-oriented <strong>Chartered Engineer</strong> with 30+ years of global experience in project management, Industry 4.0 (Automation, MES - SMART Manufacturing), and Computerised Systems Validation in Life Sciences.</p>
+      <p>My expertise bridges the gap between technical engineering (OT) and board-level strategy, ensuring digital transformation programmes deliver genuine commercial value.</p>
     </div>
+  </section>
+
+  <section id="services">
+    <h2>Core Expertise</h2>
+    <ul class="expertise-grid">
+      <li>Business & Operations Management</li>
+      <li>Automation Strategy (PLC, SCADA, DCS)</li>
+      <li>Programme & Project Management</li>
+      <li>Manufacturing IT (MES, Historian, ERP Integration)</li>
+      <li>Computerised Systems Validation (CSV / GAMP 5)</li>
+      <li>Data Integrity & Cyber Security (OT)</li>
+      <li>Industry 4.0 / 5.0 Roadmap Definition</li>
+    </ul>
   </section>
 
   <section id="qualifications">
@@ -65,24 +160,11 @@
     </ul>
   </section>
 
-  <section id="services">
-    <h2>Core Expertise</h2>
-    <ul class="expertise-grid">
-      <li>Business & Operations Management</li>
-      <li>Automation (PLC, SCADA, DCS)</li>
-      <li>User, System & Functional Requirements</li>
-      <li>Programme & Project Management</li>
-      <li>Manufacturing IT (MES, Historian)</li>
-      <li>Computerised Systems Validation (CSV)</li>
-      <li>Industry 4.0/5.0 Strategy</li>
-    </ul>
-  </section>
-
   <footer>
-    <p>Email: andrew@knottap.co.uk | Phone: +44 7899 296 926</p>
-    <p>&copy; 2026 Knott Automation Projects.</p>
+    <p><strong>Knott Automation Projects</strong></p>
+    <p>Email: <a href="mailto:andrew@knottap.co.uk">andrew@knottap.co.uk</a> | Phone: +44 7899 296 926</p>
+    <p style="margin-top:20px; font-size:0.9rem;">&copy; 2026 Knott Automation Projects. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
-
-
