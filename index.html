@@ -4,72 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Knott Automation Projects</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* CSS STYLES */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
+    header { display: flex; justify-content: space-between; align-items: center; background-color: #003366; color: white; padding: 15px 20px; }
+    header .logo { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
+    nav ul { list-style-type: none; margin: 0; padding: 0; }
+    nav ul li { display: inline; margin-left: 20px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+    
+    .hero { background-color: #f4f4f4; text-align: center; padding: 80px 20px; border-bottom: 5px solid #003366; }
+    .hero h1 { color: #003366; margin-bottom: 20px; }
+    .cta-button { display: inline-block; padding: 12px 30px; background-color: #003366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    
+    section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+    h2 { color: #003366; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+    
+    .about-text { line-height: 1.6; }
+    .career-timeline li, .expertise-grid li { margin-bottom: 10px; }
+    .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; list-style: none; padding: 0; }
+    .expertise-grid li { background: #f9f9f9; padding: 15px; border-left: 4px solid #003366; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+    footer { background-color: #003366; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    footer a { color: #ffcc00; text-decoration: none; }
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="Knott-Logo-RGB.jpg" alt="Knott Automation Projects Logo">
-    </div>
+    <div class="logo">Knott Automation Projects</div>
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
-        <li><a href="#qualifications">Qualifications</a></li>
+        <li><a href="#qualifications">Experience</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Delivering World-Class Solutions in Automation, MES, CSV, and Industry 4.0</h1>
-    <p>Learn More About My Expertise and Services</p>
-    <a href="#services" class="cta-button">Explore Now</a>
+    <p>Principal Consultant: Andrew Knott | BSc (Hons), Dipl Eng, CEng, MBA</p>
+    <br>
+    <a href="#services" class="cta-button">View Services</a>
   </section>
 
   <section id="about">
-    <img src="AJK-Photo.jpg" alt="Andrew Knott Photo" class="profile-photo">
+    <h2>About</h2>
     <div class="about-text">
-      <p><strong>Andrew Knott - Principal Consultant (Company Owner)</strong></p>
-      <p>BSc (Hons), Dipl Eng, CEng, FIET, FInstMC, CMgr, FCMI, FAPM, PMP, PMI-ACP</p>
-      <p>I am a results-oriented Chartered Engineer with 30+ years global experience in project management, Industry 4.0 (Automation, MES - SMART Manufacturing), and Computerised Systems Validation in Life Sciences.</p>
+      <p>I am a results-oriented Chartered Engineer with 30+ years of global experience in project management, Industry 4.0 (Automation, MES - SMART Manufacturing), and Computerised Systems Validation in Life Sciences.</p>
     </div>
   </section>
 
   <section id="qualifications">
-    <h2>Career Experience</h2>
+    <h2>Career Timeline</h2>
     <ul class="career-timeline">
-      <li><strong>Knott Automation Projects:</strong> Company Owner—Consultancy (2012–Present)</li>
-      <li><strong>PM Group:</strong> Business Unit Director and Global SME Industry 4.0 and CSV (2009–2011)</li>
-      <li><strong>Fluor:</strong> Business Unit Manager and Director—Process Automation and Validation (1999–2008)</li>
-      <li><strong>Kvaerner John Brown:</strong> Principal Engineer, Technical Consultant, Operations Manager—Automation (1992–1998)</li>
-      <li><strong>Siemens UK/Germany:</strong> Automation Engineer - Graduate Engineer to Engineering Manager (1986–1991)</li>
-      <li><strong>Siemens UK:</strong> Sponsored Undergraduate (1982–1986)</li>
-      <li><strong>Siemens UK:</strong> Technician Apprenticeship - Electronic & Electrical (1978–1982)</li      
+      <li><strong>Knott Automation Projects:</strong> Principal Programme Director (2012–Present)</li>
+      <li><strong>PM Group:</strong> Business Unit Director (AIS) (2009–2011)</li>
+      <li><strong>Fluor:</strong> Business Unit Director (Process Automation) (1999–2008)</li>
+      <li><strong>Kvaerner John Brown:</strong> Principal Engineer (1992–1998)</li>
+      <li><strong>Siemens:</strong> Engineer to Technical Project Manager (1978–1991)</li>
     </ul>
   </section>
 
   <section id="services">
-    <h2>Services and Key Skills</h2>
+    <h2>Core Expertise</h2>
     <ul class="expertise-grid">
       <li>Business & Operations Management</li>
       <li>Automation (PLC, SCADA, DCS)</li>
       <li>User, System & Functional Requirements</li>
-      <li>Quality Management Systems</li>
       <li>Programme & Project Management</li>
-      <li>Manufacturing IT (Infrastructure, MES, Historian)</li>
-      <li>Design - Software, Hardware & Testing</li>
-      <li>Computerised Systems Validation</li>
-      <li>Technical Leadership</li>
-      <li>Data Analytics (Python, R)</li>
+      <li>Manufacturing IT (MES, Historian)</li>
+      <li>Computerised Systems Validation (CSV)</li>
       <li>Industry 4.0/5.0 Strategy</li>
-      <li>Artificial Intelligence Integration</li>
     </ul>
   </section>
 
   <footer>
-    <p>Email: andrew@knottap.co.uk | Phone: +44(0)7899 296926 | 
-       <a href="https://www.linkedin.com/in/andrew-knott-industry-4-0-manager/" target="_blank">LinkedIn Profile</a></p>
-    <p>&copy; 2025 Knott Automation Projects. All rights reserved.</p>
+    <p>Email: andrew@knottap.co.uk | Phone: +44 7899 296 926</p>
+    <p>&copy; 2026 Knott Automation Projects.</p>
   </footer>
 </body>
 </html>
+
 
