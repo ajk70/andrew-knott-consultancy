@@ -8,34 +8,35 @@
     /* CORE STYLES */
     body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
     
-    /* HEADER */
+    /* HEADER - WHITE BACKGROUND */
     header { 
       display: flex; 
       justify-content: space-between; 
       align-items: center; 
-      background-color: #003366; 
-      color: white; 
-      padding: 10px 20px; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      background-color: #ffffff; 
+      color: #003366; 
+      padding: 15px 20px; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      border-bottom: 4px solid #003366; 
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     
     /* LOGO HANDLING */
     header .logo-container { display: flex; align-items: center; }
     header .logo-img { 
-      max-height: 60px; /* Controls logo size */
+      max-height: 65px; 
       width: auto; 
       margin-right: 15px;
-      background: white; 
-      padding: 5px;
-      border-radius: 4px;
     }
-    header .logo-text { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+    header .logo-text { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #003366; }
 
     /* NAVIGATION */
     nav ul { list-style-type: none; margin: 0; padding: 0; }
     nav ul li { display: inline; margin-left: 20px; }
-    nav ul li a { color: #f4f4f4; text-decoration: none; font-weight: 500; font-size: 1.05rem; transition: color 0.3s; }
-    nav ul li a:hover { color: #ffcc00; }
+    nav ul li a { color: #003366; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: color 0.3s; }
+    nav ul li a:hover { color: #d4af37; }
     
     /* HERO SECTION */
     .hero { 
@@ -122,7 +123,8 @@
   <section class="hero">
     <h1>Delivering World-Class Solutions in Automation, MES, CSV & Industry 4.0</h1>
     
-    <p>Principal Consultant: Andrew Knott | EUR ING, BSc (Hons), MBA</p>
+    <p>Principal Consultant: Andrew Knott | EUR ING, BSc (Hons), MBA (Distinction - Leeds)</p>
+    
     <div class="credentials">CEng, FIET, FInstMC, CMgr, FCMI, FAPM, PMP</div>
     
     <div class="btn-group">
