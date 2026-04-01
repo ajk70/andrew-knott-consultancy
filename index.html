@@ -37,16 +37,16 @@
       justify-content: space-between;
       align-items: center;
       background: var(--white);
-      padding: 14px 40px;
+      padding: 18px 40px;
       box-shadow: 0 1px 8px rgba(0,0,0,0.07);
       border-bottom: 3px solid var(--navy);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    .logo-container { display: flex; align-items: center; gap: 14px; }
-    .logo-img { max-height: 55px; width: auto; }
-    .logo-text { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.35rem; color: var(--navy); letter-spacing: 0.3px; }
+    .logo-container { display: flex; align-items: center; gap: 18px; }
+    .logo-img { max-height: 75px; width: auto; }
+    .logo-text { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.65rem; color: var(--navy); letter-spacing: 0.3px; }
     nav ul { list-style: none; display: flex; gap: 28px; }
     nav a { color: var(--navy); text-decoration: none; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.3px; transition: color 0.2s; }
     nav a:hover { color: var(--gold); }
@@ -335,8 +335,8 @@
 
   <header>
     <div class="logo-container">
-      <img src="logo.jpg" alt="Knott Automation Projects" class="logo-img" onerror="this.style.display='none'">
-      <div class="logo-text">Knott Automation Projects</div>
+      <img src="logo.jpg" alt="Knott Automation Projects" class="logo-img" onerror="this.nextElementSibling.style.display='block'">
+      <div class="logo-text" style="display:none;">Knott Automation Projects</div>
     </div>
     <nav>
       <ul>
