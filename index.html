@@ -3,185 +3,571 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knott Automation Projects | Industry 4.0 & CSV</title>
+  <title>Knott Automation Projects | Automation, MES, CSV & Training for Pharma & Life Sciences</title>
+  <meta name="description" content="Principal Consultant offering hands-on automation engineering, CSV & GAMP 5 compliance, project management, and specialist training for pharma and life sciences. Available for short-term engagements across the UK, Ireland, and Continental Europe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
-    /* CORE STYLES */
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-    
-    /* HEADER - WHITE BACKGROUND */
-    header { 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      background-color: #ffffff; 
-      color: #003366; 
-      padding: 15px 20px; 
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-      border-bottom: 4px solid #003366; 
+    :root {
+      --navy: #003366;
+      --navy-dark: #002244;
+      --gold: #d4a520;
+      --gold-light: #f0c94b;
+      --gold-pale: #fdf6e3;
+      --white: #ffffff;
+      --off-white: #f7f8fa;
+      --text: #2c3e50;
+      --text-light: #5a6a7a;
+      --border: #e2e6ea;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--white);
+      padding: 14px 40px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+      border-bottom: 3px solid var(--navy);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    
-    /* LOGO HANDLING */
-    header .logo-container { display: flex; align-items: center; }
-    header .logo-img { 
-      max-height: 65px; 
-      width: auto; 
-      margin-right: 15px;
-    }
-    header .logo-text { font-size: 1.5rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #003366; }
+    .logo-container { display: flex; align-items: center; gap: 14px; }
+    .logo-img { max-height: 55px; width: auto; }
+    .logo-text { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.35rem; color: var(--navy); letter-spacing: 0.3px; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav a { color: var(--navy); text-decoration: none; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.3px; transition: color 0.2s; }
+    nav a:hover { color: var(--gold); }
 
-    /* NAVIGATION */
-    nav ul { list-style-type: none; margin: 0; padding: 0; }
-    nav ul li { display: inline; margin-left: 20px; }
-    nav ul li a { color: #003366; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: color 0.3s; }
-    nav ul li a:hover { color: #d4af37; }
-    
-    /* HERO SECTION */
-    .hero { 
-      background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white; 
-      text-align: center; 
-      padding: 100px 20px; 
+    /* HERO */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      padding: 90px 40px 80px;
+      text-align: center;
     }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-    
-    /* Text colors fixed to white */
-    .hero p { font-size: 1.3rem; margin-bottom: 5px; font-weight: 400; color: white; }
-    .hero .credentials { font-weight: bold; font-size: 1.1rem; color: white; margin-bottom: 30px; letter-spacing: 0.5px; opacity: 0.9; }
-    
-    /* BUTTONS */
-    .btn-group { margin-top: 20px; }
-    .btn { 
-      display: inline-block; 
-      padding: 12px 25px; 
-      margin: 10px; 
-      text-decoration: none; 
-      border-radius: 5px; 
-      font-weight: bold; 
-      transition: all 0.3s;
+    .hero-inner { max-width: 820px; margin: 0 auto; }
+    .hero h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 2.6rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      font-weight: 400;
     }
-    
-    /* Primary Button (Gold) */
-    .btn-primary { background-color: #ffcc00; color: #003366; }
-    .btn-primary:hover { background-color: #e6b800; transform: translateY(-2px); }
-    
-    /* Secondary Button (CV) - White default, Blue on hover */
-    .btn-secondary { 
-      background-color: transparent; 
-      border: 2px solid white; 
-      color: white !important; 
+    .hero .subtitle {
+      font-size: 1.15rem;
+      opacity: 0.92;
+      margin-bottom: 8px;
+      font-weight: 400;
     }
-    .btn-secondary:hover { 
-      background-color: white; 
-      color: #003366 !important; 
-      transform: translateY(-2px); 
+    .hero .credentials {
+      font-size: 0.95rem;
+      opacity: 0.75;
+      letter-spacing: 0.8px;
+      margin-bottom: 32px;
     }
+    .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+    .btn {
+      display: inline-block;
+      padding: 13px 28px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s;
+      letter-spacing: 0.3px;
+    }
+    .btn-gold { background: var(--gold); color: var(--navy-dark); }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.6); color: var(--white); }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+    /* AVAILABLE NOW BANNER */
+    .available-banner {
+      background: var(--gold-pale);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 18px 40px;
+    }
+    .available-banner p {
+      font-size: 1.05rem;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .available-banner span { font-weight: 400; color: var(--text-light); }
 
     /* SECTIONS */
-    section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
-    h2 { color: #003366; border-bottom: 3px solid #ffcc00; display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
-    
-    /* GRIDS */
-    .career-timeline li { margin-bottom: 15px; padding-left: 10px; border-left: 4px solid #ddd; }
-    .career-timeline strong { color: #003366; }
-    
-    .expertise-grid { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-      gap: 20px; 
-      padding: 0; 
-      list-style: none; 
+    section { padding: 70px 40px; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 2rem;
+      color: var(--navy);
+      margin-bottom: 12px;
     }
-    .expertise-grid li { 
-      background: #f9f9f9; 
-      padding: 20px; 
-      border-left: 5px solid #003366; 
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-      font-weight: 600;
-      color: #444;
+    .section-subtitle {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+      max-width: 680px;
+    }
+    .gold-bar { width: 50px; height: 3px; background: var(--gold); margin-bottom: 25px; }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 32px 28px;
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+    .service-card:hover {
+      box-shadow: 0 6px 24px rgba(0,51,102,0.08);
+      border-color: var(--gold);
+    }
+    .service-icon {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .service-card h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.93rem;
+      color: var(--text-light);
+      line-height: 1.65;
     }
 
-    /* FOOTER */
-    footer { background-color: #003366; color: white; text-align: center; padding: 40px 20px; margin-top: 40px; }
-    footer a { color: #ffcc00; text-decoration: none; }
-    
+    /* SERVICES SECTION BG */
+    .services-section { background: var(--off-white); }
+
+    /* VALUE PROPOSITION */
+    .value-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .value-section .section-title { color: var(--white); }
+    .value-section .gold-bar { background: var(--gold); }
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 10px;
+    }
+    .value-item h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+    .value-item p {
+      font-size: 0.93rem;
+      opacity: 0.88;
+      line-height: 1.65;
+    }
+
+    /* TRAINING SECTION */
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+    .training-card {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      border-radius: 0 6px 6px 0;
+    }
+    .training-card h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .training-card p {
+      font-size: 0.93rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+    .training-meta {
+      margin-top: 40px;
+      padding: 24px 28px;
+      background: var(--gold-pale);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* CLIENTS */
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .client-item {
+      padding: 20px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--white);
+    }
+    .client-item strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .client-item span {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    /* CREDENTIALS */
+    .credentials-section { background: var(--off-white); }
+    .credentials-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .credential-badge {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.3px;
+    }
+    .career-list { list-style: none; }
+    .career-list li {
+      padding: 12px 0 12px 18px;
+      border-left: 3px solid var(--border);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .career-list li strong { color: var(--navy); }
+    .career-list li span { color: var(--text-light); font-size: 0.88rem; }
+
+    /* CONTACT / FOOTER */
+    footer {
+      background: var(--navy-dark);
+      color: var(--white);
+      padding: 60px 40px 40px;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-cta h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+    .footer-cta p {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+    .footer-contact a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .footer-contact a:hover { text-decoration: underline; }
+    .footer-contact p { margin-bottom: 12px; opacity: 0.9; }
+    .footer-bottom {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      header { flex-direction: column; }
-      nav ul { margin-top: 15px; }
+      header { flex-direction: column; padding: 14px 20px; gap: 10px; }
+      nav ul { gap: 16px; }
+      .hero { padding: 60px 20px 50px; }
+      .hero h1 { font-size: 1.9rem; }
+      section { padding: 50px 20px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 30px; }
+      .hero-cta { flex-direction: column; align-items: center; }
     }
+
+    /* SMOOTH SCROLL */
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo-container">
-      <img src="logo.jpg" alt="Knott AP Logo" class="logo-img" onerror="this.style.display='none'">
+      <img src="logo.jpg" alt="Knott Automation Projects" class="logo-img" onerror="this.style.display='none'">
       <div class="logo-text">Knott Automation Projects</div>
     </div>
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
-        <li><a href="#qualifications">Experience</a></li>
-        <li><a href="mailto:andrew@knottap.co.uk">Contact</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
-    <h1>Delivering World-Class Solutions in Automation, MES, CSV & Industry 4.0</h1>
-    
-    <p>Principal Consultant: <strong>EUR ING Andrew Knott</strong> | BSc (Hons), Dipl Eng (Engineers Degree 5-years), MBA (Distinction - Leeds)</p>
-    
-    <div class="credentials">CEng, FIET, FInstMC, CMgr, FCMI, FAPM, PMP</div>
-    
-    <div class="btn-group">
-      <a href="flyer.pdf" class="btn btn-primary" target="_blank">📄 Capability Slide Deck</a>
-      <a href="cv.pdf" class="btn btn-secondary" target="_blank">👤 Download CV</a>
+    <div class="hero-inner">
+      <h1>A Safe Pair of Hands for Pharma &amp; Life Sciences Automation</h1>
+      <p class="subtitle">Principal Consultant: <strong>EUR ING Andrew Knott</strong>&ensp;|&ensp;MBA (Distinction, Leeds &ndash; Dean&rsquo;s Prize 2025)&ensp;|&ensp;Dipl Eng&ensp;|&ensp;BSc (Hons) 1st Class</p>
+      <p class="credentials">CEng&ensp;&middot;&ensp;FIET&ensp;&middot;&ensp;FInstMC&ensp;&middot;&ensp;CMgr&ensp;&middot;&ensp;FCMI&ensp;&middot;&ensp;FAPM&ensp;&middot;&ensp;PMP&ensp;&middot;&ensp;PMI-ACP</p>
+      <div class="hero-cta">
+        <a href="mailto:andrew@knottap.co.uk" class="btn btn-gold">Get in Touch</a>
+        <a href="flyer.pdf" class="btn btn-outline" target="_blank">Capability Deck</a>
+        <a href="cv.pdf" class="btn btn-outline" target="_blank">Download CV</a>
+      </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>Executive Summary</h2>
-    <div class="about-text">
-      <p>I am a results-oriented <strong>Chartered Engineer</strong> with 30+ years of global experience in project management, Industry 4.0 (Automation, MES - SMART Manufacturing), and Computerised Systems Validation in Life Sciences.</p>
-      <p>My expertise bridges the gap between technical engineering (OT) and board-level strategy, ensuring digital transformation programmes deliver genuine commercial value.</p>
+  <!-- AVAILABILITY BANNER -->
+  <div class="available-banner">
+    <p>Available now for short-term engagements.&ensp;<span>No minimum commitment. Fixed price or day rate. I can start quickly.</span></p>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="section-inner">
+      <div class="gold-bar"></div>
+      <h2 class="section-title">What I Can Help With</h2>
+      <p class="section-subtitle">30 years of hands-on delivery &mdash; from Siemens apprentice to Programme Director. I take on projects, consultancy, and training engagements of any size.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">🔧</span>
+          <h3>Hands-on Engineering</h3>
+          <p>PLC programming (Siemens S7, Rockwell), HMI/SCADA development, and DCS configuration (DeltaV, PCS7). I started on the tools and still enjoy getting my hands dirty.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">📋</span>
+          <h3>Audits &amp; Health Checks</h3>
+          <p>Independent review of your automation systems, validation status, or project governance. Honest assessment, practical recommendations.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">📄</span>
+          <h3>Documentation</h3>
+          <p>URS, functional specifications, design documents, validation protocols, and SOPs. Well-structured, fully traceable, and written to withstand MHRA or FDA scrutiny without rework. If an auditor picks it up, it tells the full story from requirements through to testing.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">✅</span>
+          <h3>CSV &amp; GAMP 5</h3>
+          <p>Validation strategy, gap analysis, remediation planning, and Data Integrity reviews. I&rsquo;ve defined global CSV strategies for Novo Nordisk and led validation programmes at J&amp;J and GE Healthcare.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">📊</span>
+          <h3>Project Management</h3>
+          <p>PMP and PMI-ACP certified. I can manage your system integration project, run your vendor, or rescue one that&rsquo;s gone sideways.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">🏭</span>
+          <h3>Digital Transformation Strategy</h3>
+          <p>Practical, phased roadmaps connecting control systems through MES and Historian to ERP and business intelligence. Independent advice &mdash; no vendor allegiance, no platform bias.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="services">
-    <h2>Core Expertise</h2>
-    <ul class="expertise-grid">
-      <li>Business & Operations Management</li>
-      <li>Automation Strategy (PLC, SCADA, DCS)</li>
-      <li>Programme & Project Management</li>
-      <li>Manufacturing IT (MES, Historian, ERP Integration)</li>
-      <li>Computerised Systems Validation (CSV / GAMP 5)</li>
-      <li>Data Integrity & Cyber Security (OT)</li>
-      <li>Industry 4.0 / 5.0 Roadmap Definition</li>
-    </ul>
+  <!-- VALUE PROPOSITION -->
+  <section class="value-section">
+    <div class="section-inner">
+      <div class="gold-bar"></div>
+      <h2 class="section-title">Why Work With Me Directly</h2>
+      <div class="value-grid">
+        <div class="value-item">
+          <h3>No Overheads</h3>
+          <p>Senior-level expertise without the agency markup, consultancy overheads, or day-rate premium. You get me directly &mdash; no account managers, no layers, no inflated rates funding someone else&rsquo;s office.</p>
+        </div>
+        <div class="value-item">
+          <h3>Flexible Engagement</h3>
+          <p>Day rate, fixed price, or retained hours. From a one-day health check through to a three-month programme definition. Whatever suits your problem and your budget.</p>
+        </div>
+        <div class="value-item">
+          <h3>Available to Travel</h3>
+          <p>Based in North Yorkshire. Available to work remotely or on-site across the UK, Ireland, and Continental Europe. Expenses additional for on-site work.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="qualifications">
-    <h2>Career Timeline</h2>
-    <ul class="career-timeline">
-      <li><strong>Knott Automation Projects:</strong> Programme Director and Principal Consultant (2012–Present)</li>
-      <li><strong>PM Group:</strong> Business Unit Director (AIS) (2009–2011)</li>
-      <li><strong>Fluor:</strong> Business Unit Director (Process Automation) (1999–2008)</li>
-      <li><strong>Kvaerner John Brown:</strong> Principal Engineer (1992–1998)</li>
-      <li><strong>Siemens:</strong> Engineer to Technical Project Manager (1978–1991)</li>
-    </ul>
+  <!-- TRAINING -->
+  <section id="training">
+    <div class="section-inner">
+      <div class="gold-bar"></div>
+      <h2 class="section-title">Specialist Training</h2>
+      <p class="section-subtitle">I&rsquo;m a qualified trainer (Level 3 Award in Education &amp; Training) and deliver practical workshops built around your site, your systems, and your team&rsquo;s real challenges.</p>
+
+      <div class="training-grid">
+        <div class="training-card">
+          <h3>CSV &amp; GAMP 5</h3>
+          <p>For engineers, QA staff, and project teams who need to understand validation properly &mdash; not just tick a box. Covers risk-based approaches, documentation expectations, Data Integrity, and what auditors actually look for. Tailored to your platform.</p>
+        </div>
+
+        <div class="training-card">
+          <h3>ISA-88 Batch Control</h3>
+          <p>Very few people teach S88 from real implementation experience. I&rsquo;ve configured batch systems on DeltaV, PCS7, and ABB 800xA across API, biologics, and fill-finish facilities. This workshop connects the theory to what your team will actually build and maintain.</p>
+        </div>
+
+        <div class="training-card">
+          <h3>Project Management for Engineers</h3>
+          <p>For technical leads stepping into project roles. Practical methods for scoping, scheduling, vendor management, risk, and stakeholder reporting &mdash; grounded in automation project realities, not abstract theory. Suitable for Level 4/5 development.</p>
+        </div>
+      </div>
+
+      <div class="training-meta">
+        <strong>Format:</strong> 1-day or 2-day workshops, on-site or remote. Teams of 4&ndash;20. Can be structured as CPD for IET, InstMC, or CMI membership.&ensp;
+        <strong>Pricing:</strong> Senior-level expertise without the training company overheads. Get in touch for a quote tailored to your team size and objectives.
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p><strong>Knott Automation Projects</strong></p>
-    <p>Email: <a href="mailto:andrew@knottap.co.uk">andrew@knottap.co.uk</a> | Phone: +44 7899 296 926</p>
-    <p style="margin-top:20px; font-size:0.9rem;">&copy; 2026 Knott Automation Projects. All Rights Reserved.</p>
+  <!-- CLIENTS -->
+  <section class="services-section" id="clients">
+    <div class="section-inner">
+      <div class="gold-bar"></div>
+      <h2 class="section-title">Recent Clients</h2>
+      <p class="section-subtitle">A selection of recent engagements across Life Sciences and Manufacturing.</p>
+
+      <div class="clients-grid">
+        <div class="client-item">
+          <strong>GE Healthcare</strong>
+          <span>Programme Director &mdash; MES/eBR &amp; Historian deployment (2024)</span>
+        </div>
+        <div class="client-item">
+          <strong>Novo Nordisk</strong>
+          <span>Global CSV Strategy for new-build capital projects (2022)</span>
+        </div>
+        <div class="client-item">
+          <strong>Takeda</strong>
+          <span>Programme turnaround &mdash; 150 systems, 5 workstreams (2020)</span>
+        </div>
+        <div class="client-item">
+          <strong>Johnson &amp; Johnson</strong>
+          <span>3-year Automation &amp; CSV Lead &mdash; 11,000 IO facility (2016&ndash;19)</span>
+        </div>
+        <div class="client-item">
+          <strong>SolutionsPT</strong>
+          <span>Product validation &amp; Octoplant deployment (2023)</span>
+        </div>
+        <div class="client-item">
+          <strong>Cognizant</strong>
+          <span>Associate Director &mdash; Life Sciences MES (2021)</span>
+        </div>
+        <div class="client-item">
+          <strong>GSK</strong>
+          <span>Biopharma Process Development &mdash; Control &amp; SCADA</span>
+        </div>
+        <div class="client-item">
+          <strong>Sanofi</strong>
+          <span>Approved preferred supplier &mdash; global automation standards</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS & CAREER -->
+  <section class="credentials-section" id="experience">
+    <div class="section-inner">
+      <div class="gold-bar"></div>
+      <h2 class="section-title">Credentials &amp; Career</h2>
+
+      <div class="credentials-row">
+        <span class="credential-badge">EUR ING</span>
+        <span class="credential-badge">CEng</span>
+        <span class="credential-badge">FIET</span>
+        <span class="credential-badge">FInstMC</span>
+        <span class="credential-badge">CMgr</span>
+        <span class="credential-badge">FCMI</span>
+        <span class="credential-badge">FAPM</span>
+        <span class="credential-badge">PMP</span>
+        <span class="credential-badge">PMI-ACP</span>
+      </div>
+
+      <div class="credentials-row">
+        <span class="credential-badge">MBA Distinction &mdash; Leeds (Dean&rsquo;s Prize 2025)</span>
+        <span class="credential-badge">Dipl Eng &mdash; Salford</span>
+        <span class="credential-badge">BSc (Hons) 1st Class &mdash; Salford</span>
+        <span class="credential-badge">AI Certificate &mdash; Oxford Sa&iuml;d</span>
+        <span class="credential-badge">Exceptional NED &mdash; Leeds</span>
+        <span class="credential-badge">Level 3 AET &mdash; York College</span>
+      </div>
+
+      <ul class="career-list" style="margin-top: 30px;">
+        <li><strong>Knott Automation Projects</strong> &mdash; Programme Director &amp; Principal Consultant <span>(2012&ndash;Present)</span></li>
+        <li><strong>PM Group</strong> &mdash; Business Unit Director, Automation &amp; Information Systems <span>(2008&ndash;2012)</span></li>
+        <li><strong>Fluor</strong> &mdash; Business Unit Director, Process Automation &mdash; UK &amp; Europe <span>(1999&ndash;2008)</span></li>
+        <li><strong>Kvaerner John Brown</strong> &mdash; Principal Engineer &amp; Technical Consultant <span>(1992&ndash;1998)</span></li>
+        <li><strong>Siemens</strong> &mdash; Apprentice Technician to Technical Project Manager &mdash; UK &amp; Germany <span>(1978&ndash;1991)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-cta">
+        <h2>Let&rsquo;s Have a Conversation</h2>
+        <p>Whether you need a one-day health check, a two-week audit, or a programme rescue &mdash; I&rsquo;m happy to have a no-obligation conversation about what you need.</p>
+        <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 16px;">I pick up the phone, turn up, and deliver.</p>
+      </div>
+      <div class="footer-contact">
+        <p><strong>Andrew Knott</strong></p>
+        <p>📧&ensp;<a href="mailto:andrew@knottap.co.uk">andrew@knottap.co.uk</a></p>
+        <p>📞&ensp;<a href="tel:+447899296926">+44 7899 296 926</a></p>
+        <p>🔗&ensp;<a href="https://www.linkedin.com/in/andrew-knott-programme-director-pharma4-digital-transformation/" target="_blank" rel="noopener">LinkedIn Profile</a></p>
+        <p style="margin-top: 16px;">🌐&ensp;<a href="https://www.knottadvisory.co.uk" target="_blank" rel="noopener">Knott Advisory</a>&ensp;<span style="opacity: 0.5;">|</span>&ensp;Board Advisory &amp; NED Services</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Knott Automation Projects. All Rights Reserved.
+    </div>
   </footer>
 
 </body>
