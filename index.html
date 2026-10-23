@@ -190,7 +190,7 @@
     /* OEM SECTION */
     .oem-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
       gap: 24px;
     }
     .oem-item {
@@ -462,6 +462,7 @@
         <span class="platform-tag">Ignition SCADA</span>
         <span class="platform-tag">WinCC</span>
         <span class="platform-tag">OPC UA</span>
+        <span class="platform-tag">MTP</span>
         <span class="platform-tag">ISA-88</span>
         <span class="platform-tag">PackML</span>
         <span class="platform-tag">GAMP 5</span>
@@ -479,6 +480,10 @@
         <div class="oem-item">
           <h3>Documentation Your Customers Accept</h3>
           <p>FDS, design specs, test protocols and traceability written to GAMP 5 &mdash; the pack a pharma QA team expects to receive with validated equipment.</p>
+        </div>
+        <div class="oem-item">
+          <h3>MTP-Ready Modules</h3>
+          <p>Libraries structured for Module Type Package (VDI/VDE/NAMUR 2658), so your skids can expose services, HMI and data to the customer&rsquo;s orchestration layer over OPC UA &mdash; ready as pharma moves to modular, plug-and-produce plants.</p>
         </div>
       </div>
     </div>
