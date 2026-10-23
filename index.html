@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knott Automation Projects | Automation, MES, CSV & Training for Pharma & Life Sciences</title>
-  <meta name="description" content="Principal Consultant offering hands-on automation engineering, CSV & GAMP 5 compliance, project management, and specialist training for pharma and life sciences. Available for short-term engagements across the UK, Ireland, and Continental Europe.">
+  <title>Knott Automation Projects | Turnkey Siemens S7, Ignition &amp; WinCC Automation and Training for Pharma &amp; Biotech</title>
+  <meta name="description" content="Turnkey Siemens S7 PLC, Ignition SCADA and WinCC SCADA projects for pharma and biotech equipment OEMs and end users, delivered to GAMP 5 by a chartered engineer. Plus specialist training in PLCs, ISA-88 batch, PackML, GAMP 5 and project management.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -187,6 +187,37 @@
       line-height: 1.65;
     }
 
+    /* OEM SECTION */
+    .oem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .oem-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--navy);
+      border-radius: 0 0 6px 6px;
+      padding: 26px 24px;
+    }
+    .oem-item h3 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.12rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .oem-item p { font-size: 0.93rem; color: var(--text-light); line-height: 1.65; }
+    .platform-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 36px; }
+    .platform-tag {
+      background: var(--navy);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 3px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
     /* TRAINING SECTION */
     .training-grid {
       display: grid;
@@ -319,7 +350,7 @@
     /* RESPONSIVE */
     @media (max-width: 768px) {
       header { flex-direction: column; padding: 14px 20px; gap: 10px; }
-      nav ul { gap: 16px; }
+      nav ul { gap: 10px 16px; flex-wrap: wrap; justify-content: center; }
       .hero { padding: 60px 20px 50px; }
       .hero h1 { font-size: 1.9rem; }
       section { padding: 50px 20px; }
@@ -341,6 +372,7 @@
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
+        <li><a href="#oem">For OEMs</a></li>
         <li><a href="#training">Training</a></li>
         <li><a href="#clients">Clients</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -352,11 +384,13 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <h1>A Safe Pair of Hands for Pharma &amp; Life Sciences Automation</h1>
+      <h1>Turnkey Pharma &amp; Biotech Automation<br>Siemens S7 &middot; Ignition &middot; WinCC</h1>
+      <p class="subtitle" style="margin-bottom:22px;">GAMP 5-compliant control systems for equipment OEMs and end users &mdash; delivered by the engineer who does the work, without system-integrator overheads.</p>
       <p class="subtitle">Principal Consultant: <strong>EUR ING Andrew Knott</strong>&ensp;|&ensp;MBA (Distinction, Leeds &ndash; Dean&rsquo;s Prize 2025)&ensp;|&ensp;Dipl Eng&ensp;|&ensp;BSc (Hons) 1st Class</p>
       <p class="credentials">CEng&ensp;&middot;&ensp;FIET&ensp;&middot;&ensp;FInstMC&ensp;&middot;&ensp;CMgr&ensp;&middot;&ensp;FCMI&ensp;&middot;&ensp;FAPM&ensp;&middot;&ensp;PMP&ensp;&middot;&ensp;PMI-ACP</p>
       <div class="hero-cta">
-        <a href="mailto:andrew@knottap.co.uk" class="btn btn-gold">Get in Touch</a>
+        <a href="mailto:andrew@knottap.co.uk" class="btn btn-gold">Discuss a Project</a>
+        <a href="#oem" class="btn btn-outline">For Equipment OEMs</a>
         <a href="flyer.pdf" class="btn btn-outline" target="_blank">Capability Deck</a>
         <a href="cv.pdf" class="btn btn-outline" target="_blank">Download CV</a>
       </div>
@@ -365,7 +399,7 @@
 
   <!-- AVAILABILITY BANNER -->
   <div class="available-banner">
-    <p>Available now for short-term engagements.&ensp;<span>No minimum commitment. Fixed price or day rate. I can start quickly.</span></p>
+    <p>Now taking on turnkey projects, OEM partnerships and training courses.&ensp;<span>Fixed price or day rate. Remote or on-site across the UK, Ireland and Europe.</span></p>
   </div>
 
   <!-- SERVICES -->
@@ -373,13 +407,13 @@
     <div class="section-inner">
       <div class="gold-bar"></div>
       <h2 class="section-title">What I Can Help With</h2>
-      <p class="section-subtitle">30 years of hands-on delivery &mdash; from Siemens apprentice to Programme Director. I take on projects, consultancy, and training engagements of any size.</p>
+      <p class="section-subtitle">45+ years of hands-on delivery &mdash; from Siemens apprentice in 1978 to Programme Director. I take on turnkey projects, consultancy and training engagements of any size.</p>
 
       <div class="services-grid">
         <div class="service-card">
           <span class="service-icon">🔧</span>
-          <h3>Hands-on Engineering</h3>
-          <p>PLC programming (Siemens S7, Rockwell), HMI/SCADA development, and DCS configuration (DeltaV, PCS7). I started on the tools and still enjoy getting my hands dirty.</p>
+          <h3>Turnkey Control Systems</h3>
+          <p>Complete Siemens S7 (TIA Portal) PLC, Ignition SCADA and WinCC SCADA projects &mdash; from URS and functional design through code, FAT, SAT and handover, with GAMP 5 documentation throughout. Rockwell, DeltaV and PCS 7 experience too. I started on the tools and still write the code.</p>
         </div>
 
         <div class="service-card">
@@ -415,6 +449,41 @@
     </div>
   </section>
 
+  <!-- OEM -->
+  <section id="oem">
+    <div class="section-inner">
+      <div class="gold-bar"></div>
+      <h2 class="section-title">For Equipment OEMs</h2>
+      <p class="section-subtitle">Bioprocess, filtration and packaging skid builders need control systems that integrate cleanly on the end user&rsquo;s site and survive their QA review. That is what I deliver.</p>
+
+      <div class="platform-row">
+        <span class="platform-tag">Siemens S7-1500 / S7-1200</span>
+        <span class="platform-tag">TIA Portal</span>
+        <span class="platform-tag">Ignition SCADA</span>
+        <span class="platform-tag">WinCC</span>
+        <span class="platform-tag">OPC UA</span>
+        <span class="platform-tag">ISA-88</span>
+        <span class="platform-tag">PackML</span>
+        <span class="platform-tag">GAMP 5</span>
+      </div>
+
+      <div class="oem-grid">
+        <div class="oem-item">
+          <h3>Proven, Reusable Libraries</h3>
+          <p>Tested PLC libraries that work across platforms, built on OPC UA-compliant modules and UDTs. Less bespoke code per skid, faster testing and consistent behaviour across your product range.</p>
+        </div>
+        <div class="oem-item">
+          <h3>Integration-Ready Skids</h3>
+          <p>ISA-88 and PackML state models and clean OPC UA interfaces, so your equipment drops into the customer&rsquo;s SCADA, batch or MES layer without a custom integration project.</p>
+        </div>
+        <div class="oem-item">
+          <h3>Documentation Your Customers Accept</h3>
+          <p>FDS, design specs, test protocols and traceability written to GAMP 5 &mdash; the pack a pharma QA team expects to receive with validated equipment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- VALUE PROPOSITION -->
   <section class="value-section">
     <div class="section-inner">
@@ -422,12 +491,16 @@
       <h2 class="section-title">Why Work With Me Directly</h2>
       <div class="value-grid">
         <div class="value-item">
-          <h3>No Overheads</h3>
-          <p>Senior-level expertise without the agency markup, consultancy overheads, or day-rate premium. You get me directly &mdash; no account managers, no layers, no inflated rates funding someone else&rsquo;s office.</p>
+          <h3>No System-Integrator Overheads</h3>
+          <p>Senior, chartered engineering at a fraction of typical SI cost. You get me directly &mdash; no account managers, no layers, no inflated rates funding someone else&rsquo;s office.</p>
+        </div>
+        <div class="value-item">
+          <h3>Pharma Quality, Built In</h3>
+          <p>Deliverables designed for regulated manufacture from day one &mdash; GAMP 5 lifecycle, data integrity and traceability, as delivered for J&amp;J, Novo Nordisk, Takeda and GE Healthcare.</p>
         </div>
         <div class="value-item">
           <h3>Flexible Engagement</h3>
-          <p>Day rate, fixed price, or retained hours. From a one-day health check through to a three-month programme definition. Whatever suits your problem and your budget.</p>
+          <p>Fixed-price turnkey delivery, day rate or retained hours. From a one-day health check to a full control system. Whatever suits your problem and your budget.</p>
         </div>
         <div class="value-item">
           <h3>Available to Travel</h3>
@@ -442,17 +515,32 @@
     <div class="section-inner">
       <div class="gold-bar"></div>
       <h2 class="section-title">Specialist Training</h2>
-      <p class="section-subtitle">I&rsquo;m a qualified trainer (Level 3 Award in Education &amp; Training) and deliver practical workshops built around your site, your systems, and your team&rsquo;s real challenges.</p>
+      <p class="section-subtitle">I&rsquo;m a qualified trainer (Level 3 Award in Education &amp; Training, currently completing a PGDE in Lifelong Learning) and deliver practical courses built around your site, your systems and your team&rsquo;s real challenges.</p>
 
       <div class="training-grid">
+        <div class="training-card">
+          <h3>Siemens S7 PLC, Ignition &amp; WinCC</h3>
+          <p>Hands-on TIA Portal programming, diagnostics and fault-finding on real S7-1500 and S7-1200 hardware, plus Ignition and WinCC SCADA configuration. For engineers and maintenance technicians who support these systems day to day.</p>
+        </div>
+
+        <div class="training-card">
+          <h3>PLC Fundamentals &amp; Basic Logic</h3>
+          <p>A grounding course for apprentices, technicians and engineers new to automation: I/O, ladder and function-block logic, timers, counters and structured fault-finding.</p>
+        </div>
+
         <div class="training-card">
           <h3>CSV &amp; GAMP 5</h3>
           <p>For engineers, QA staff, and project teams who need to understand validation properly &mdash; not just tick a box. Covers risk-based approaches, documentation expectations, Data Integrity, and what auditors actually look for. Tailored to your platform.</p>
         </div>
 
         <div class="training-card">
-          <h3>ISA-88 Batch Control</h3>
-          <p>Very few people teach S88 from real implementation experience. I&rsquo;ve configured batch systems on DeltaV, PCS7, and ABB 800xA across API, biologics, and fill-finish facilities. This workshop connects the theory to what your team will actually build and maintain.</p>
+          <h3>ISA-88 Batch Control for API Manufacture</h3>
+          <p>Very few people teach S88 from real implementation experience. I&rsquo;ve worked with ISA-88 since 1992, presented at World Batch Forum, and configured batch systems on DeltaV, PCS 7 and ABB 800xA across API, biologics and fill-finish facilities. This course connects the theory to what your team will actually build and maintain.</p>
+        </div>
+
+        <div class="training-card">
+          <h3>PackML for Secondary Pharma</h3>
+          <p>The ISA-TR88.00.02 state model and PackTags applied to packaging and secondary pharma lines &mdash; consistent machine states, OEE data and line integration.</p>
         </div>
 
         <div class="training-card">
@@ -554,7 +642,7 @@
     <div class="footer-inner">
       <div class="footer-cta">
         <h2>Let&rsquo;s Have a Conversation</h2>
-        <p>Whether you need a one-day health check, a two-week audit, or a programme rescue &mdash; I&rsquo;m happy to have a no-obligation conversation about what you need.</p>
+        <p>Whether you&rsquo;re an OEM needing a control system for your next skid, a site with a project to deliver, or a team to upskill &mdash; I&rsquo;m happy to have a no-obligation conversation about what you need.</p>
         <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 16px;">I pick up the phone, turn up, and deliver.</p>
       </div>
       <div class="footer-contact">
